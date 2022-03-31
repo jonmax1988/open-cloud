@@ -57,4 +57,52 @@
         <servlet-name>actionServlet</servlet-name>
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>lifeServlet</servlet-name>
+        <servlet-class>Action.LiftServlet</servlet-class>
+        <init-param>
+            <param-name>company</param-name>
+            <param-value>jonmax</param-value>
+        </init-param>
+        <init-param>
+            <param-name>address</param-name>
+            <param-value>SuZhou</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>lifeServlet</servlet-name>
+        <url-pattern>/life</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>context01Servlet</servlet-name>
+        <servlet-class>Action.Context01Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>context01Servlet</servlet-name>
+        <url-pattern>/context01</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>context02Servlet</servlet-name>
+        <servlet-class>Action.Context02Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>context02Servlet</servlet-name>
+        <url-pattern>/context02</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>count</param-name>
+        <param-value>1000</param-value>
+    </context-param>
+    
+    <servlet>
+        <servlet-name>threadSafeServlet</servlet-name>
+        <servlet-class>Action.ThreadSafeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>threadSafeServlet</servlet-name>
+        <url-pattern>/safe</url-pattern>
+    </servlet-mapping>
 </web-app>
